@@ -1,9 +1,10 @@
 {
   "name": "Debate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www | npm run compile-sass",
+    "compile-sass": "node-sass --watch --output-style compressed sass/ --output public/stylesheets/"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
