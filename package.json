@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www | npm run compile-sass",
+    "start": "node ./bin/www",
     "compile-sass": "node-sass --watch --output-style compressed sass/ --output public/stylesheets/"
   },
   "dependencies": {
