@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
+var MongoClient = require('mongodb').MongoClient;
 
 var routes = require('./routes/index');
 var api = require('./routes/api');
@@ -25,10 +26,10 @@ app.use(cookieParser());
 // Compile Sass middleware:
 app.use(
  sassMiddleware({
-   src: __dirname + '/sass', 
+   src: __dirname + '/sass',
    dest: __dirname + '/public/stylesheets',
    prefix:  '/stylesheets',
-   debug: true,         
+   debug: true,
  })
 );
 
