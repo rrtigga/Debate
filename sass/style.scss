@@ -39,12 +39,17 @@ p {
 	line-height: 20px;
 }
 
+a, a:hover {
+	color: #171616;
+	text-decoration: none;
+}
+
 figcaption {
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: #999;
-  margin: 0 0 30px 0;
+	font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #999;
+	margin: 0 0 30px 0;
 }
 
 ::selection {
@@ -91,16 +96,16 @@ figcaption {
 }
 
 .startButton {
-  background: white;
-  color: #F6A623;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
-  display: table;
-  margin: 10px auto;
-  -webkit-appearance: none;
-  padding: 10px 20px;
+	background: white;
+	color: #F6A623;
+	font-size: 16px;
+	font-weight: 400;
+	border-radius: 6px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+	display: table;
+	margin: 10px auto;
+	-webkit-appearance: none;
+	padding: 10px 20px;
 }
 
 /* 
@@ -353,6 +358,7 @@ Trending
 		width: 250px;
 
 		.debateImage {
+			border-radius: 4px;
 			background-size: 100%;                      
 			background-repeat: no-repeat;
 			background-position: center center; 
@@ -372,31 +378,61 @@ Debate
 ========================================================================================
 */
 
-.profile {
-  max-width: 50px;
-  width: 50px;
-  height: auto;
-}
+#opinion {
+	margin: 0 20px;
+	padding: 2% 0;
+	.profile {
+		border-radius: 4px;
+		max-width: 50px;
+		width: 50px;
+		height: auto;
+	}
+	div.coverImage {
+		padding-top: 100px;
+		border-radius: 4px;
+		background-size: 100%;                      
+		background-repeat: no-repeat;
+		background-position: center center; 
+		width: 100%;
+		height: 200px;
+	}
 
-.supportButton {
-  background: #F6A623;
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 5px 40px;
-  border: 6px solid #F6A623;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
-}
+	.supportButton {
+		background: #F6A623;
+		color: white;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 5px 40px;
+		border: 6px solid #F6A623;
+		border-radius: 10px;
+		box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+	}
 
-.opposeButton {
-  margin: 0 20px;
-  background: #8EC9FE;
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 5px 40px;
-  border: 6px solid #8EC9FE;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+	.opposeButton {
+		margin: 0 20px;
+		background: #8EC9FE;
+		color: white;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 5px 40px;
+		border: 6px solid #8EC9FE;
+		border-radius: 10px;
+		box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+	}
+	#progressBar {
+		background: #8EC9FE;
+		border-radius: 13px;
+		height: 20px;
+		width: 100%;
+	}
+
+	#progressBar:after {
+		content: '';
+		display: block;
+		background: #F6A623;
+		width: 50%;
+		height: 100%;
+		border-radius: 9px;
+	}
+
 }

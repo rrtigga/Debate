@@ -6,8 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/debate', function(req, res, next) {
-  res.render('debate', { title: 'Express' });
+router.get('/opinion', function(req, res, next) {
+  res.render('opinion', { title: 'Express' });
+});
+
+router.get('/obamacare', function(req, res, next) {
+  res.render('obamacare', { title: 'Express' });
 });
 
 
