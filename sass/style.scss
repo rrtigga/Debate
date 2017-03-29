@@ -5,6 +5,7 @@
 -Grid
 -Trending
 -Debate
+-About
 */
 
 
@@ -57,6 +58,10 @@ figcaption {
 	color: white;
 }
 
+.orange {
+	color: #F6A623;
+}
+
 
 .floatLeft{
 	float: left;
@@ -106,6 +111,10 @@ figcaption {
 	margin: 10px auto;
 	-webkit-appearance: none;
 	padding: 10px 20px;
+}
+
+#section {
+	margin: 0 20px;
 }
 
 /* 
@@ -435,4 +444,95 @@ Debate
 		border-radius: 9px;
 	}
 
+}
+
+/* 
+========================================================================================
+About
+========================================================================================
+*/
+
+#about {
+	margin: 0 20px;
+	.container {
+		max-width: 860px;
+		margin: 0 auto;
+	}
+}
+
+/* 
+========================================================================================
+About
+========================================================================================
+*/
+
+#post {
+	margin: 0 20px;
+	padding-bottom: 50px;
+	input[type=text], select {
+		font-size: 16px;
+		width: 50%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		autocomplete: none;
+	}
+
+	.box {
+		input[type=text], select {
+			font-size: 16px;
+			width: 80%;
+			height: 400px;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+	}
+
+	input[type=submit] {
+		width: 100%;
+		background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	input[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+	textarea {
+		font-size: 16px;
+		width: 80%;
+		height: 300px;
+		padding: 0.4em;
+	}
+
+	.postButton {
+		background: #F6A623;
+		color: white;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 5px 40px;
+		border: 6px solid #F6A623;
+		border-radius: 10px;
+		box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+		display: table;
+	}
+
+	#postForm {
+		p {
+			// display: inline-block;
+			// padding-right: 2%;
+		}
+	}
 }

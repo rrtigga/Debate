@@ -14,5 +14,13 @@ router.get('/obamacare', function(req, res, next) {
   res.render('obamacare', { title: 'Express' });
 });
 
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'Express' });
+});
+
+router.get('/post', function(req, res, next) {
+  res.render('post', { title: 'Express' });
+});
+
 
 module.exports = router;
