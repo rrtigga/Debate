@@ -9,8 +9,8 @@ var url = 'mongodb://localhost:27017/debate';
 
 /**
   GET info for debate listing.
-  @Params {ObjectId} - debate ID
-  @Return {JSON} - JSON for specific debate content
+  @param {ObjectId} - debate ID
+  @return {JSON} - JSON for specific debate content
   */
 router.get('/'+api_version+'/debate/:id', function(req, res, next) {
   var id = req.params.id;
@@ -29,8 +29,8 @@ router.get('/'+api_version+'/debate/:id', function(req, res, next) {
 
 /**
   GET opinions for debate listing.
-  @Params {ObjectId} - debate ID
-  @Return {JSON} - JSON for all opinions for that debate item
+  @param {ObjectId} - debate ID
+  @return {JSON} - JSON for all opinions for that debate item
   */
 router.get('/'+api_version+'/debate/:id/opinions', function(req, res, next) {
   var id = req.params.id;
@@ -49,8 +49,8 @@ router.get('/'+api_version+'/debate/:id/opinions', function(req, res, next) {
 
 /**
   GET votes for opinions.
-  @Params {ObjectId} - opinion ID
-  @Return {JSON} - JSON for all opinions for that debate item
+  @param {ObjectId} - opinion ID
+  @return {JSON} - JSON for all opinions for that debate item
   */
 router.get('/'+api_version+'/opinions/:id/votes', function(req, res, next) {
   var id = req.params.id;
