@@ -7,9 +7,10 @@ var mdb = require('mongodb').MongoClient,
 var api_version = '1';
 var url = 'mongodb://localhost:27017/debate';
 
-/* GET info for debate listing.
-  @Params: debate ID
-  @Return: JSON for specific debate content
+/**
+  GET info for debate listing.
+  @Params {ObjectId} - debate ID
+  @Return {JSON} - JSON for specific debate content
   */
 router.get('/'+api_version+'/debate/:id', function(req, res, next) {
   var id = req.params.id;
@@ -26,9 +27,10 @@ router.get('/'+api_version+'/debate/:id', function(req, res, next) {
 
 });
 
-/* GET opinions for debate listing.
-  @Params: debate ID
-  @Return: JSON for all opinions for that debate item
+/**
+  GET opinions for debate listing.
+  @Params {ObjectId} - debate ID
+  @Return {JSON} - JSON for all opinions for that debate item
   */
 router.get('/'+api_version+'/debate/:id/opinions', function(req, res, next) {
   var id = req.params.id;
@@ -45,9 +47,10 @@ router.get('/'+api_version+'/debate/:id/opinions', function(req, res, next) {
 
 });
 
-/* GET votes for opinions.
-  @Params: opinion ID
-  @Return: JSON for all opinions for that debate item
+/**
+  GET votes for opinions.
+  @Params {ObjectId} - opinion ID
+  @Return {JSON} - JSON for all opinions for that debate item
   */
 router.get('/'+api_version+'/opinions/:id/votes', function(req, res, next) {
   var id = req.params.id;
