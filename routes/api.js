@@ -8,6 +8,26 @@ var api_version = '1';
 var url = 'mongodb://localhost:27017/debate';
 
 /**
+  GET all debates
+  @param {} 
+  @return {JSON} - JSON for specific debate content
+  */
+router.get('/'+api_version+'/debate', function(req, res, next) {
+  var id = req.params.id;
+
+  mdb.connect(url, function(err, db) {
+    assert.equal(null, err);
+
+    db.collection('debates').find().toArray(function(err, results) {
+      res.json(results);
+    })
+
+    db.close();
+  });
+
+});
+
+/**
   GET info for debate listing.
   @param {ObjectId} - debate ID
   @return {JSON} - JSON for specific debate content
@@ -19,6 +39,26 @@ router.get('/'+api_version+'/debate/:id', function(req, res, next) {
     assert.equal(null, err);
 
     db.collection('debates').find({"_id": new ObjectId(id)}).toArray(function(err, results) {
+      res.json(results);
+    })
+
+    db.close();
+  });
+
+});
+
+/**
+  GET all opinions for debate listing
+  @param {} 
+  @return {JSON} - JSON for specific debate content
+  */
+router.get('/'+api_version+'/opinions', function(req, res, next) {
+  var id = req.params.id;
+
+  mdb.connect(url, function(err, db) {
+    assert.equal(null, err);
+
+    db.collection('opinions').find().toArray(function(err, results) {
       res.json(results);
     })
 
