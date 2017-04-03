@@ -13,9 +13,9 @@ var RepeatModule = React.createClass({
          );
       });
       return (
-      	<div className="row">
-            {listItems}
-        </div>
+        	<div className="row">
+              {listItems}
+          </div>
       );
    }
 });
@@ -45,7 +45,15 @@ var data = [
 	{
 		"title": "Did Trump’s refugee ban make us safer?",
 		"imageURL":"../images/debates/trump.png"
-	}
+	},
+  {
+    "title": "Did Trump’s refugee ban make us safer?",
+    "imageURL":"../images/debates/trump.png"
+  },
+  {
+    "title": "Did Trump’s refugee ban make us safer?",
+    "imageURL":"../images/debates/trump.png"
+  }
 ];
 ReactDOM.render(<RepeatModule items={data} />, document.getElementById('trending-content'));
 
