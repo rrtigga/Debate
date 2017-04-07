@@ -10,7 +10,7 @@
 <body>
 	<div class="navbar-component">
 		<div class="navbar area">
-			<a href="" class="brand"><b>Debate</b></a>
+			<a onclick="goHome()" class="brand"><b>Debate</b></a>
 			<nav role="navigation" id="navigation" class="list">
 				<a class="item -link">About</a>
 				<a class="item -link">Sign In / Sign Up</a>
@@ -47,13 +47,15 @@
 						<option value="3 days">3 days</option>
 					</select>
 					<p>Argument</p>
-					<textarea rows="4" cols="50" placeholder="Write a thoughtful well-researched introduction to your argument"> </textarea>
+					<textarea id="argument" rows="4" cols="50" placeholder="Write a thoughtful well-researched introduction to your argument"> </textarea>
 				</form>
-				<div class="postButton"><p>Post</p></div>
+				<div onclick="postDebate()" class="postButton"><p>Post</p></div>
 			</div>
 		</div>
 	</section>
 	<script src="/javascripts/jquery-3.1.1.min.js" type="text/javascript"></script>
 	<script src="/javascripts/nav.js" type="text/javascript"></script>
+	<script src="/javascripts/redirect.js" type="text/javascript"></script>
+	<script src="/javascripts/post.js" type="text/javascript"></script>
 </body>
 </html>

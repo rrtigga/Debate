@@ -31,7 +31,7 @@ router.get('/'+api_version+'/debate', function(req, res, next) {
   GET info for debate listing.
   @param {ObjectId} - debate ID
   @return {JSON} - JSON for specific debate content
-  */
+*/
 router.get('/'+api_version+'/debate/:id', function(req, res, next) {
   var id = req.params.id;
 
