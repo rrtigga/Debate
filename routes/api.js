@@ -24,7 +24,6 @@ router.get('/'+api_version+'/debate', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 /**
@@ -44,7 +43,6 @@ router.get('/'+api_version+'/debate/:id', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 /**
@@ -64,7 +62,6 @@ router.get('/'+api_version+'/opinions', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 /**
@@ -84,7 +81,6 @@ router.get('/'+api_version+'/debate/:id/opinions', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 /**
