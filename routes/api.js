@@ -5,7 +5,9 @@ var mdb = require('mongodb').MongoClient,
   assert = require('assert');
 
 var api_version = '1';
-var url = 'mongodb://localhost:27017/debate';
+if (express().get('env') === 'development') {
+  var url = 'mongodb://localhost:27017/debate';
+}
 
 /**
   GET all debates
