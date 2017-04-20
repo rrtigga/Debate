@@ -7,7 +7,7 @@ var mdb = require('mongodb').MongoClient,
 var api_version = '1';
 var url = 'mongodb://localhost:27017/debate';
 
-router.post('/'+api_version+'/post', function(req, res, next) {
+router.post('/'+api_version+'/postDebate', function(req, res, next) {
   var debate = new Debate(req.body);
   console.log(debate, "here is the debate");
   debate.save(function(err) {

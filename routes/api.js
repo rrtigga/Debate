@@ -5,11 +5,13 @@ var mdb = require('mongodb').MongoClient,
   assert = require('assert');
 
 var api_version = '1';
-var url = 'mongodb://localhost:27017/debate';
+if (express().get('env') === 'development') {
+  var url = 'mongodb://localhost:27017/debate';
+}
 
 /**
   GET all debates
-  @param {} 
+  @param {}
   @return {JSON} - JSON for specific debate content
   */
 router.get('/'+api_version+'/debate', function(req, res, next) {
@@ -24,7 +26,6 @@ router.get('/'+api_version+'/debate', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 /**
@@ -44,12 +45,11 @@ router.get('/'+api_version+'/debate/:id', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 /**
   GET all opinions for debate listing
-  @param {} 
+  @param {}
   @return {JSON} - JSON for specific debate content
   */
 router.get('/'+api_version+'/opinions', function(req, res, next) {
@@ -64,7 +64,6 @@ router.get('/'+api_version+'/opinions', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 /**
@@ -84,7 +83,6 @@ router.get('/'+api_version+'/debate/:id/opinions', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 /**
@@ -104,7 +102,6 @@ router.get('/'+api_version+'/opinions/:id/votes', function(req, res, next) {
 
     db.close();
   });
-
 });
 
 module.exports = router;
