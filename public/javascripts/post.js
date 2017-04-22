@@ -16,7 +16,7 @@ function postDebate() {
     contentType: "application/json",
         //contentType: "application/x-www-form-urlencoded",
         dataType:'json',
-        url: 'http://localhost:27017/post',                      
+        url: 'http://localhost:27017/postDebate',                      
         success: function(data) {
           console.log(JSON.stringify(data), "This is the debateObject");                               
         },
