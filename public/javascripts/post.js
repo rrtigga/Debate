@@ -1,3 +1,7 @@
+var api_version = '1';
+var URL = 'http://localhost:3000';
+
+
 function postDebate() {
   var topic = document.getElementById('topic').value;
   var tags = document.getElementById('tags').value;
@@ -16,7 +20,7 @@ function postDebate() {
     contentType: "application/json",
         //contentType: "application/x-www-form-urlencoded",
         dataType:'json',
-        url: 'http://localhost:27017/postDebate',                      
+        url: URL+'/'+api_version+"/postDebate",                      
         success: function(data) {
           console.log(JSON.stringify(data), "This is the debateObject");                               
         },

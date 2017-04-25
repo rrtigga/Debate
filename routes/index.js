@@ -10,6 +10,10 @@ router.get('/opinion', function(req, res, next) {
   res.render('opinion', { title: 'Opinion' });
 });
 
+router.get('/opinions', function(req, res, next) {
+  res.render('opinions', { title: 'Express' });
+});
+
 router.get('/obamacare', function(req, res, next) {
   res.render('obamacare', { title: 'Obama-Care' });
 });

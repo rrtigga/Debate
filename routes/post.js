@@ -7,14 +7,27 @@ var mdb = require('mongodb').MongoClient,
 var api_version = '1';
 var url = 'mongodb://localhost:27017/debate';
 
+router.use(function(req, res, next) {
+    console.log('request', req.url, req.body, req.method);
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-token");
+    if(req.method === 'OPTIONS') {
+        res.end();
+    }
+    else {
+        next();
+    }
+});
+
 router.post('/'+api_version+'/postDebate', function(req, res, next) {
   var debate = new Debate(req.body);
   console.log(debate, "here is the debate");
+
   debate.save(function(err) {
     if (err) throw err;
+    res.send(debate);
     console.log('Debate saved successfully!');
   });
-  res.json(debate);
 });
 
 // router.get('/'+api_version+'/debate', function(req, res, next) {

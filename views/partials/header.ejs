@@ -10,6 +10,7 @@
 	<script src="/javascripts/react/react.dom.min.js" type="text/javascript"></script>
 	<script src="/javascripts/react/browser.min.js"></script>
 	<script src="/javascripts/trending.jsx" type="text/babel"></script>
+	<script src="/javascripts/facebookLogin.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="navbar-component">
@@ -17,7 +18,7 @@
 			<a href="/" class="brand" title="Home button"><b>Debate</b></a>
 			<nav role="navigation" id="navigation" class="list">
 				<a class="item -link" href="/about" title="About us">About</a>
-				<a class="item -link">Sign In / Sign Up</a>
+				<a onclick="fb_login();" class="item -link">Sign In / Sign Up</a>
 			</nav>
 			<button id="navButton" data-collapse data-target="#navigation" class="toggle">
 				<span class="icon"></span>

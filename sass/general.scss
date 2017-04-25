@@ -537,3 +537,47 @@ About
 		}
 	}
 }
+/* 
+========================================================================================
+Opinions
+========================================================================================
+*/
+
+#opinions{
+	margin: 0 20px;
+	padding-top: 20px;
+	.tabs {
+	  color: #9B9B9B;
+	  font-size: 20px;
+	  font-weight: 300;
+	  margin-top: 65px;
+	  height: 50px;
+	  .noWrap {
+	    white-space: nowrap;
+	    overflow-x: scroll;
+	    height: 100%;
+	    span{
+	      padding-right: 50px;
+	    }
+	  }
+	}
+
+	.debate {
+		width: 250px;
+		max-width: 250px;
+
+		.debateImage {
+			border-radius: 4px;
+			background-size: 100%;                      
+			background-repeat: no-repeat;
+			background-position: center center; 
+			width: 250px;
+			height: 165px;
+		}
+		p{
+			font-size: 16px;
+			font-weight: 500;
+		}
+
+	}
+}
