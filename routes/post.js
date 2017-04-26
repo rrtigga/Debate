@@ -23,11 +23,21 @@ router.post('/'+api_version+'/postDebate', function(req, res, next) {
   var debate = new Debate(req.body);
   console.log(debate, "here is the debate");
 
-  debate.save(function(err) {
-    if (err) throw err;
-    res.send(debate);
-    console.log('Debate saved successfully!');
+  mdb.connect(url, function(err, db) {
+    assert.equal(null, err);
+    db.collection('debates').insert(debate,function(err){
+      console.log(debate, "saved successfully");
+      res.send(debate);
+    });
+
+    db.close();
   });
+  // debate.save(function(err) {
+  //   if (err) throw err;
+  //   res.send(debate);
+  //   console.log('Debate saved successfully!');
+  // });
+
 });
 
 // router.get('/'+api_version+'/debate', function(req, res, next) {
