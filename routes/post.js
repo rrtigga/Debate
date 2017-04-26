@@ -2,21 +2,21 @@ var express = require('express');
 var router = express.Router();
 var Debate = require('../models/debate');
 var mdb = require('mongodb').MongoClient,
-  ObjectId = require('mongodb').ObjectID,
-  assert = require('assert');
+ObjectId = require('mongodb').ObjectID,
+assert = require('assert');
 var api_version = '1';
 var url = 'mongodb://localhost:27017/debate';
 
 router.use(function(req, res, next) {
-    console.log('request', req.url, req.body, req.method);
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-token");
-    if(req.method === 'OPTIONS') {
-        res.end();
-    }
-    else {
-        next();
-    }
+  console.log('request', req.url, req.body, req.method);
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-token");
+  if(req.method === 'OPTIONS') {
+    res.end();
+  }
+  else {
+    next();
+  }
 });
 
 router.post('/'+api_version+'/postDebate', function(req, res, next) {
@@ -32,6 +32,7 @@ router.post('/'+api_version+'/postDebate', function(req, res, next) {
 
     db.close();
   });
+  
   // debate.save(function(err) {
   //   if (err) throw err;
   //   res.send(debate);

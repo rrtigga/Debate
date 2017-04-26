@@ -1,3 +1,7 @@
+var api_version = '1';
+var URL = 'http://localhost:3000';
+
+
 window.fbAsyncInit = function() {
 	FB.init({
 		appId      : '1278157095625639',
@@ -27,16 +31,16 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
     testAPI();
-} else if (response.status === 'not_authorized') {
+  } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
     'into this app.';
-} else {
+  } else {
     // The person is not logged into Facebook, so we're not sure if
     // they are logged into this app or not.
     document.getElementById('status').innerHTML = 'Please log ' +
     'into Facebook.';
-}
+  }
 }
 
 function fb_login(){
@@ -50,11 +54,11 @@ function fb_login(){
           console.log("userID: "+ userID);
           //refer to getData() function below
           getData(accessToken);
-      } else {
+        } else {
           //user hit cancel button
           console.log('User cancelled login or did not fully authorize.');
-      }
-  }, {'scope': 'public_profile,email,user_friends,user_likes,user_location'});
+        }
+      }, {'scope': 'public_profile,email,user_friends,user_likes,user_location'});
 }
 
 function getData(accessToken) {
@@ -74,16 +78,16 @@ function getData(accessToken) {
     		contentType: "application/json",
         //contentType: "application/x-www-form-urlencoded",
         dataType:'json',
-        url: 'http://localhost:3000/facebookLogin',                      
+        url: URL+'/'+api_version+"/facebookLogin",                      
         success: function(data) {
         	console.log(JSON.stringify(data), "JSON User Object here");                               
         },
         error: function(error) {
         	console.log(error);
         }
+      });
     });
-    });
-});
+  });
 
   //check if the loginStatus works
   FB.getLoginStatus(function(response) {
@@ -97,11 +101,11 @@ function getData(accessToken) {
       //redirect to feed.ejs
       //window.location = "feed";
 
-  } else if (response.status === 'not_authorized') {
+    } else if (response.status === 'not_authorized') {
       // the user is logged in to Facebook, 
       // but has not authenticated your app
-  } else {
+    } else {
       // the user isn't logged in to Facebook.
-  }
-});
+    }
+  });
 }
