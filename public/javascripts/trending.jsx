@@ -27,9 +27,9 @@ var ListItem = function(props) {
      return (
      	<div className="">
 	     	<div className="debate column _33">
-				<div style={backgroundImage} className="debateImage"></div>
-				<p>{props.item.title}</p>
-			</div>
+				  <div style={backgroundImage} className="debateImage"></div>
+				  <p>{props.item.title}</p>
+			 </div>
 		</div>
      );
 }
@@ -56,5 +56,3 @@ var data = [
   }
 ];
 ReactDOM.render(<RepeatModule items={data} />, document.getElementById('trending-content'));
-
-
